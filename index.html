@@ -1,24 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Character Network</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.25.0/cytoscape.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relationship Web</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Cytoscape.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #121212; /* Deep Charcoal */
+            color: #E0E0E0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #cy {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        /* Custom Scrollbar for Legend if needed */
+        .legend-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+        .legend-scroll::-webkit-scrollbar-thumb {
+            background-color: #4a5568; 
+            border-radius: 4px;
+        }
+    </style>
 </head>
 <body>
-  <div id="controls">
-    <button id="toggle-edit">Toggle Edit Mode</button>
-    <button id="add-char">Add Character</button>
-    <button id="download-db">💾 Download DB</button>
-    <span id="edit-status">View Mode</span>
-  </div>
-  <div id="cy"></div>
-  
-  <div id="modal" class="hidden"></div>
-  
-  <script src="js/sql-wasm.js"></script>
-  <script src="js/app.js"></script>
+
+    <!-- Main Graph Container -->
+    <div id="cy"></div>
+
+    <!-- UI Overlay: Legend -->
+    <div class="absolute top-4 left-4 bg-gray-900 bg-opacity-90 border border-gray-700 rounded-lg p-4 shadow-xl backdrop-blur-sm max-w-xs z-10 pointer-events-none sm:pointer-events-auto">
+        <h2 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-3 border-b border-gray-700 pb-2">Relationships</h2>
+        <ul class="space-y-2 text-xs sm:text-sm">
+            <li class="flex items-center"><span class="w-4 h-4 rounded-full mr-2" style="background-color: #e64ced;"></span> In Love With</li>
+            <li class="flex items-center"><span class="w-4 h-4 rounded-full mr-2" style="background-color: #9d4ced;"></span> Likes A Lot</li>
+            <li class="flex items-center"><span class="w-4 h-4 rounded-full mr-2" style="background-color: #4c92ed;"></span> Likes</li>
+            <li class="flex items-center"><span class="w-4 h-4 rounded-full mr-2" style="background-color: #25a641;"></span> Neutral</li>
+            <li class="flex items-center"><span class="w-4 h-4 rounded-full mr-2" style="background-color: #e0db55;"></span> Dislikes</li>
+            <li class="flex items-center"><span class="w-4 h-4 rounded-full mr-2" style="background-color: #f99938;"></span> Hates</li>
+            <li class="flex items-center"><span class="w-4 h-4 rounded-full mr-2" style="background-color: #bb1f0a;"></span> Despises</li>
+        </ul>
+    </div>
+
+    <!-- UI Overlay: Controls -->
+    <div class="absolute top-4 right-4 z-10">
+        <button id="reset-btn" class="bg-gray-800 hover:bg-gray-700 text-white font-semibold py-2 px-4 border border-gray-600 rounded shadow transition duration-200 ease-in-out flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            </svg>
+            Clear Selection
+        </button>
+    </div>
+
+    <!-- Status Message -->
+    <div id="status-msg" class="absolute bottom-4 left-4 text-xs text-gray-500 pointer-events-none">
+        Initializing...
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const statusMsg = document.getElementById('status-msg');
+
+            // --- CONFIGURATION ---
+            const COLOR_MAP = {
+                'in_love_with': '#e64ced',
+                'likes_a_lot': '#9d4ced',
+                'likes': '#4c92ed',
+                'neutral': '#25a641',
+                'dislikes': '#e0db55',
+                'hates': '#f99938',
+                'despises': '#bb1f0a'
+            };
+
+            const DEFAULT_NODE_SIZE = 50;
+            const SELECTED_NODE_SIZE = 85; 
+            const ASSET_PATH = 'assets/portraits/';
+
+            // --- MOCK DATA ---
+            const MOCK_CHARACTERS = [
+                { id: 'c1', name: 'Alice', image_filename: null },
+                { id: 'c2', name: 'Bob', image_filename: 'bob.png' },
+                { id: 'c3', name: 'Charlie', image_filename: null },
+                { id: 'c4', name: 'Diana', image_filename: 'diana.jpg' },
+                { id: 'c5', name: 'Eve', image_filename: null },
+                { id: 'c6', name: 'Frank', image_filename: null }
+            ];
+
+            const MOCK_RELATIONSHIPS = [
+                { source: 'c1', target: 'c2', type: 'in_love_with' },
+                { source: 'c2', target: 'c1', type: 'likes' },
+                { source: 'c2', target: 'c3', type: 'hates' },
+                { source: 'c3', target: 'c2', type: 'despises' },
+                { source: 'c3', target: 'c4', type: 'likes_a_lot' },
+                { source: 'c4', target: 'c1', type: 'neutral' },
+                { source: 'c5', target: 'c1', type: 'dislikes' },
+                { source: 'c5', target: 'c6', type: 'likes' },
+                { source: 'c6', target: 'c5', type: 'in_love_with' },
+                { source: 'c1', target: 'c5', type: 'neutral' }
+            ];
+
+            let cy = null;
+            let lockedNodes = new Set();
+
+            // --- SVG GENERATOR FOR TEXT-ONLY PORTRAITS ---
+            function generatePortraitSVG(name) {
+                const words = name.split(' ');
+                let textContent = '';
+                if (words.length > 1) {
+                    textContent = `<tspan x="50%" dy="-0.6em">${words[0]}</tspan><tspan x="50%" dy="1.2em">${words[1]}</tspan>`;
+                } else {
+                    textContent = `<tspan x="50%" y="50%" dominant-baseline="middle">${name}</tspan>`;
+                }
+
+                const svg = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="48" fill="#ffffff" stroke="#cccccc" stroke-width="2" />
+                    <text x="50%" y="50%" text-anchor="middle" font-family="sans-serif" font-weight="bold" font-size="20" fill="#2d3748" style="text-transform: uppercase;">
+                        ${textContent}
+                    </text>
+                </svg>`;
+                return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+            }
+
+            // --- ASYNC IMAGE VALIDATOR ---
+            async function checkImageExists(url) {
+                try {
+                    const response = await fetch(url, { method: 'HEAD' });
+                    return response.ok;
+                } catch {
+                    return false;
+                }
+            }
+
+            async function loadData() {
+                try {
+                    const [charsRes, relsRes] = await Promise.all([
+                        fetch('characters.json'),
+                        fetch('relationships.json')
+                    ]);
+                    if (!charsRes.ok || !relsRes.ok) throw new Error("Files not found");
+                    return { characters: await charsRes.json(), relationships: await relsRes.json() };
+                } catch (error) {
+                    statusMsg.innerText = "Using mock data (external files not found).";
+                    return { characters: MOCK_CHARACTERS, relationships: MOCK_RELATIONSHIPS };
+                }
+            }
+
+            async function initCy(data) {
+                statusMsg.innerText = "Validating assets...";
+                const elements = [];
+
+                const processedCharacters = await Promise.all(data.characters.map(async char => {
+                    let finalBg = null;
+                    if (char.image_filename) {
+                        const fullPath = ASSET_PATH + char.image_filename;
+                        const exists = await checkImageExists(fullPath);
+                        finalBg = exists ? fullPath : generatePortraitSVG(char.name);
+                    } else {
+                        finalBg = generatePortraitSVG(char.name);
+                    }
+                    
+                    return {
+                        data: {
+                            id: char.id,
+                            name: char.name,
+                            bg: finalBg
+                        }
+                    };
+                }));
+
+                processedCharacters.forEach(node => elements.push(node));
+
+                data.relationships.forEach((rel, index) => {
+                    elements.push({
+                        data: {
+                            id: `e${index}`,
+                            source: rel.source,
+                            target: rel.target,
+                            type: rel.type,
+                            color: COLOR_MAP[rel.type] || '#888'
+                        }
+                    });
+                });
+
+                cy = cytoscape({
+                    container: document.getElementById('cy'),
+                    elements: elements,
+                    boxSelectionEnabled: false,
+                    autounselectify: true,
+                    layout: {
+                        name: 'circle',
+                        radius: Math.min(window.innerWidth, window.innerHeight) / 3,
+                        animate: true,
+                        padding: 50
+                    },
+                    style: [
+                        {
+                            selector: 'node',
+                            style: {
+                                'width': DEFAULT_NODE_SIZE,
+                                'height': DEFAULT_NODE_SIZE,
+                                'background-image': 'data(bg)',
+                                'background-fit': 'cover',
+                                'background-color': '#ffffff',
+                                'label': 'data(name)',
+                                'text-valign': 'bottom',
+                                'text-halign': 'center',
+                                'text-margin-y': 6,
+                                'color': '#E0E0E0',
+                                'font-size': '14px',
+                                'text-outline-width': 2,
+                                'text-outline-color': '#121212',
+                                'text-opacity': 0,
+                                'z-index': 10,
+                                'transition-property': 'width, height, background-color, opacity, text-opacity',
+                                'transition-duration': '0.2s'
+                            }
+                        },
+                        {
+                            selector: 'edge',
+                            style: {
+                                'width': 3,
+                                'line-color': 'data(color)',
+                                'target-arrow-color': 'data(color)',
+                                'target-arrow-shape': 'triangle',
+                                'curve-style': 'unbundled-bezier',
+                                'control-point-distances': [20, -20],
+                                'arrow-scale': 1.2,
+                                'opacity': 1,
+                                'transition-property': 'width, opacity, line-color',
+                                'transition-duration': '0.2s'
+                            }
+                        },
+                        // --- Active neighborhood (100% opacity) ---
+                        {
+                            selector: '.highlighted',
+                            style: {
+                                'opacity': 1,
+                                'z-index': 900,
+                                'text-opacity': 1
+                            }
+                        },
+                        // --- Specifically selected/locked nodes (Scale up) ---
+                        {
+                            selector: '.selected',
+                            style: {
+                                'width': SELECTED_NODE_SIZE,
+                                'height': SELECTED_NODE_SIZE,
+                                'z-index': 9999
+                            }
+                        },
+                        {
+                            selector: '.faded',
+                            style: {
+                                'opacity': 0.15,
+                                'z-index': 1
+                            }
+                        },
+                        {
+                            selector: 'edge.highlighted',
+                            style: {
+                                'width': 4,
+                                'z-index': 999
+                            }
+                        }
+                    ]
+                });
+
+                bindEvents();
+                statusMsg.innerText = "Ready.";
+            }
+
+            function updateVisibility(hoveredNodeId = null) {
+                if (lockedNodes.size === 0 && hoveredNodeId === null) {
+                    cy.elements().removeClass('faded highlighted selected');
+                    return;
+                }
+                
+                const activeNodes = new Set();
+                const activeEdges = new Set();
+                const selectedNodes = new Set(); // Those explicitly locked or hovered
+
+                // Mark selected nodes
+                lockedNodes.forEach(id => selectedNodes.add(id));
+                if (hoveredNodeId) selectedNodes.add(hoveredNodeId);
+
+                const activateNeighborhood = (nodeId) => {
+                    const node = cy.getElementById(nodeId);
+                    if (node.nonempty()) {
+                        activeNodes.add(nodeId);
+                        node.connectedEdges().forEach(edge => {
+                            activeEdges.add(edge.id());
+                            activeNodes.add(edge.source().id());
+                            activeNodes.add(edge.target().id());
+                        });
+                    }
+                };
+
+                selectedNodes.forEach(id => activateNeighborhood(id));
+
+                cy.batch(() => {
+                    cy.elements().forEach(ele => {
+                        if (ele.isNode()) {
+                            const isSelected = selectedNodes.has(ele.id());
+                            const isActive = activeNodes.has(ele.id());
+                            
+                            ele.toggleClass('selected', isSelected);
+                            ele.toggleClass('highlighted', isActive);
+                            ele.toggleClass('faded', !isActive);
+                        } else {
+                            const isActive = activeEdges.has(ele.id());
+                            ele.toggleClass('highlighted', isActive);
+                            ele.toggleClass('faded', !isActive);
+                        }
+                    });
+                });
+            }
+
+            function bindEvents() {
+                cy.on('mouseover', 'node', e => {
+                    document.body.style.cursor = 'pointer';
+                    updateVisibility(e.target.id());
+                });
+                cy.on('mouseout', 'node', () => {
+                    document.body.style.cursor = 'default';
+                    updateVisibility(null);
+                });
+                cy.on('tap', 'node', e => {
+                    const id = e.target.id();
+                    lockedNodes.has(id) ? lockedNodes.delete(id) : lockedNodes.add(id);
+                    updateVisibility(id);
+                });
+                cy.on('tap', e => {
+                    if (e.target === cy) {
+                        lockedNodes.clear();
+                        updateVisibility(null);
+                    }
+                });
+                document.getElementById('reset-btn').addEventListener('click', () => {
+                    lockedNodes.clear();
+                    updateVisibility(null);
+                });
+            }
+
+            loadData().then(data => initCy(data));
+        });
+    </script>
 </body>
 </html>
