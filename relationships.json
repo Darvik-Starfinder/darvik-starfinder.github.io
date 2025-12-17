@@ -1,0 +1,32 @@
+[
+  {
+    "source": "alloy",
+    "target": "ichor",
+    "type": "in_love_with"
+  },
+  {
+    "source": "alloy",
+    "target": "darvik",
+    "type": "likes"
+  },
+  {
+    "source": "darvik",
+    "target": "alloy",
+    "type": "dislikes"
+  },
+  {
+    "source": "darvik",
+    "target": "ichor",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "ichor",
+    "target": "alloy",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "ichor",
+    "target": "darvik",
+    "type": "hates"
+  }
+]

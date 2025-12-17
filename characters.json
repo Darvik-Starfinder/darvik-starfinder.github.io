@@ -1,0 +1,17 @@
+[
+  {
+    "id": "darvik",
+    "name": "Darvik",
+    "image_filename": "darvik.jpg"
+  },
+  {
+    "id": "alloy",
+    "name": "Alloy",
+    "image_filename": "alloy.jpg"
+  },
+  {
+    "id": "ichor",
+    "name": "Ichor",
+    "image_filename": "ichor.jpg"
+  }
+]
