@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+#cy {
+  width: 100vw;
+  height: 100vh;
+  background: #f5f5f5;
+}
+
+#controls {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+button {
+  margin-right: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+#edit-status {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+#modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  max-width: 90vw;
+  max-height: 80vh;
+  overflow: auto;
+  z-index: 2000;
+}
+
+.hidden { display: none; }
+
+/* Cytoscape styles */
+.node-highlighted {
+  border-width: 4px;
+  border-color: #333;
+}
+
+.edge-highlighted {
+  width: 4 !important;
+  line-color: #ff6b6b !important;
+}
+
+.dimmed {
+  opacity: 0.15;
+}
