@@ -1,13 +1,673 @@
 [
   {
+    "source": "prion",
+    "target": "alan_spork",
+    "type": "hates"
+  },
+  {
+    "source": "prion",
+    "target": "alloy",
+    "type": "hates"
+  },
+  {
+    "source": "prion",
+    "target": "caleir",
+    "type": "dislikes"
+  },
+  {
+    "source": "prion",
+    "target": "coop",
+    "type": "likes"
+  },
+  {
+    "source": "prion",
+    "target": "copyright",
+    "type": "neutral"
+  },
+  {
+    "source": "prion",
+    "target": "darling",
+    "type": "hates"
+  },
+  {
+    "source": "prion",
+    "target": "darvik",
+    "type": "hates"
+  },
+  {
+    "source": "prion",
+    "target": "gruyere",
+    "type": "neutral"
+  },
+  {
+    "source": "prion",
+    "target": "ice",
+    "type": "hates"
+  },
+  {
+    "source": "prion",
+    "target": "ichor",
+    "type": "dislikes"
+  },
+  {
+    "source": "prion",
+    "target": "lumi",
+    "type": "dislikes"
+  },
+  {
+    "source": "prion",
+    "target": "neil_spork",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "prion",
+    "target": "oatmeal",
+    "type": "likes"
+  },
+  {
+    "source": "prion",
+    "target": "polarity",
+    "type": "neutral"
+  },
+  {
+    "source": "prion",
+    "target": "rick",
+    "type": "dislikes"
+  },
+  {
+    "source": "prion",
+    "target": "ryvets",
+    "type": "despises"
+  },
+  {
+    "source": "alloy",
+    "target": "alan_spork",
+    "type": "despises"
+  },
+  {
+    "source": "alloy",
+    "target": "captain",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "alloy",
+    "target": "cobalt",
+    "type": "in_love_with"
+  },
+  {
+    "source": "alloy",
+    "target": "coop",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "alloy",
+    "target": "copyright",
+    "type": "dislikes"
+  },
+  {
+    "source": "alloy",
+    "target": "darling",
+    "type": "likes"
+  },
+  {
+    "source": "alloy",
+    "target": "darvik",
+    "type": "likes"
+  },
+  {
+    "source": "alloy",
+    "target": "fragment",
+    "type": "hates"
+  },
+  {
+    "source": "alloy",
+    "target": "gruyere",
+    "type": "likes"
+  },
+  {
+    "source": "alloy",
+    "target": "ice",
+    "type": "despises"
+  },
+  {
     "source": "alloy",
     "target": "ichor",
     "type": "in_love_with"
   },
   {
     "source": "alloy",
+    "target": "lumi",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "alloy",
+    "target": "mars",
+    "type": "hates"
+  },
+  {
+    "source": "alloy",
+    "target": "neil_spork",
+    "type": "hates"
+  },
+  {
+    "source": "alloy",
+    "target": "oatmeal",
+    "type": "dislikes"
+  },
+  {
+    "source": "alloy",
+    "target": "polarity",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "alloy",
+    "target": "richter",
+    "type": "dislikes"
+  },
+  {
+    "source": "alloy",
+    "target": "rick",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "alloy",
+    "target": "ryvets",
+    "type": "likes"
+  },
+  {
+    "source": "alloy",
+    "target": "starlight",
+    "type": "despises"
+  },
+  {
+    "source": "alloy",
+    "target": "torque",
+    "type": "despises"
+  },
+  {
+    "source": "alloy",
+    "target": "volt",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "angelique",
+    "target": "axel",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "angelique",
+    "target": "stacy",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "axel",
+    "target": "angelique",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "axel",
+    "target": "stacy",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "captain",
+    "target": "alan_spork",
+    "type": "neutral"
+  },
+  {
+    "source": "captain",
+    "target": "alloy",
+    "type": "in_love_with"
+  },
+  {
+    "source": "captain",
+    "target": "cobalt",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "captain",
+    "target": "coop",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "captain",
+    "target": "copyright",
+    "type": "neutral"
+  },
+  {
+    "source": "captain",
+    "target": "darling",
+    "type": "in_love_with"
+  },
+  {
+    "source": "captain",
+    "target": "darvik",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "captain",
+    "target": "fragment",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "captain",
+    "target": "gruyere",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "captain",
+    "target": "ice",
+    "type": "neutral"
+  },
+  {
+    "source": "captain",
+    "target": "ichor",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "captain",
+    "target": "lumi",
+    "type": "neutral"
+  },
+  {
+    "source": "captain",
+    "target": "mars",
+    "type": "in_love_with"
+  },
+  {
+    "source": "captain",
+    "target": "neil_spork",
+    "type": "neutral"
+  },
+  {
+    "source": "captain",
+    "target": "oatmeal",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "captain",
+    "target": "polarity",
+    "type": "in_love_with"
+  },
+  {
+    "source": "captain",
+    "target": "richter",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "captain",
+    "target": "rick",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "captain",
+    "target": "ryvets",
+    "type": "neutral"
+  },
+  {
+    "source": "captain",
+    "target": "starlight",
+    "type": "likes"
+  },
+  {
+    "source": "captain",
+    "target": "torque",
+    "type": "in_love_with"
+  },
+  {
+    "source": "captain",
+    "target": "volt",
+    "type": "in_love_with"
+  },
+  {
+    "source": "cobalt",
+    "target": "alan_spork",
+    "type": "despises"
+  },
+  {
+    "source": "cobalt",
+    "target": "alloy",
+    "type": "likes"
+  },
+  {
+    "source": "cobalt",
+    "target": "captain",
+    "type": "neutral"
+  },
+  {
+    "source": "cobalt",
+    "target": "coop",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "cobalt",
+    "target": "copyright",
+    "type": "likes"
+  },
+  {
+    "source": "cobalt",
+    "target": "darling",
+    "type": "dislikes"
+  },
+  {
+    "source": "cobalt",
     "target": "darvik",
     "type": "likes"
+  },
+  {
+    "source": "cobalt",
+    "target": "fragment",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "cobalt",
+    "target": "gruyere",
+    "type": "dislikes"
+  },
+  {
+    "source": "cobalt",
+    "target": "ice",
+    "type": "hates"
+  },
+  {
+    "source": "cobalt",
+    "target": "ichor",
+    "type": "likes"
+  },
+  {
+    "source": "cobalt",
+    "target": "lumi",
+    "type": "hates"
+  },
+  {
+    "source": "cobalt",
+    "target": "mars",
+    "type": "likes"
+  },
+  {
+    "source": "cobalt",
+    "target": "neil_spork",
+    "type": "neutral"
+  },
+  {
+    "source": "cobalt",
+    "target": "oatmeal",
+    "type": "likes"
+  },
+  {
+    "source": "cobalt",
+    "target": "polarity",
+    "type": "hates"
+  },
+  {
+    "source": "cobalt",
+    "target": "richter",
+    "type": "dislikes"
+  },
+  {
+    "source": "cobalt",
+    "target": "rick",
+    "type": "neutral"
+  },
+  {
+    "source": "cobalt",
+    "target": "ryvets",
+    "type": "neutral"
+  },
+  {
+    "source": "cobalt",
+    "target": "starlight",
+    "type": "likes"
+  },
+  {
+    "source": "cobalt",
+    "target": "torque",
+    "type": "dislikes"
+  },
+  {
+    "source": "cobalt",
+    "target": "volt",
+    "type": "likes"
+  },
+  {
+    "source": "coop",
+    "target": "alan_spork",
+    "type": "despises"
+  },
+  {
+    "source": "coop",
+    "target": "alloy",
+    "type": "neutral"
+  },
+  {
+    "source": "coop",
+    "target": "captain",
+    "type": "neutral"
+  },
+  {
+    "source": "coop",
+    "target": "cobalt",
+    "type": "likes"
+  },
+  {
+    "source": "coop",
+    "target": "copyright",
+    "type": "likes"
+  },
+  {
+    "source": "coop",
+    "target": "darling",
+    "type": "neutral"
+  },
+  {
+    "source": "coop",
+    "target": "darvik",
+    "type": "neutral"
+  },
+  {
+    "source": "coop",
+    "target": "fragment",
+    "type": "likes"
+  },
+  {
+    "source": "coop",
+    "target": "gruyere",
+    "type": "dislikes"
+  },
+  {
+    "source": "coop",
+    "target": "ice",
+    "type": "despises"
+  },
+  {
+    "source": "coop",
+    "target": "ichor",
+    "type": "likes"
+  },
+  {
+    "source": "coop",
+    "target": "lumi",
+    "type": "dislikes"
+  },
+  {
+    "source": "coop",
+    "target": "mars",
+    "type": "likes"
+  },
+  {
+    "source": "coop",
+    "target": "neil_spork",
+    "type": "neutral"
+  },
+  {
+    "source": "coop",
+    "target": "oatmeal",
+    "type": "likes"
+  },
+  {
+    "source": "coop",
+    "target": "polarity",
+    "type": "neutral"
+  },
+  {
+    "source": "coop",
+    "target": "richter",
+    "type": "dislikes"
+  },
+  {
+    "source": "coop",
+    "target": "rick",
+    "type": "likes"
+  },
+  {
+    "source": "coop",
+    "target": "ryvets",
+    "type": "neutral"
+  },
+  {
+    "source": "coop",
+    "target": "starlight",
+    "type": "dislikes"
+  },
+  {
+    "source": "coop",
+    "target": "torque",
+    "type": "neutral"
+  },
+  {
+    "source": "coop",
+    "target": "volt",
+    "type": "neutral"
+  },
+  {
+    "source": "darling",
+    "target": "prion",
+    "type": "dislikes"
+  },
+  {
+    "source": "darling",
+    "target": "emery",
+    "type": "dislikes"
+  },
+  {
+    "source": "darling",
+    "target": "alan_spork",
+    "type": "despises"
+  },
+  {
+    "source": "darling",
+    "target": "alloy",
+    "type": "hates"
+  },
+  {
+    "source": "darling",
+    "target": "captain",
+    "type": "dislikes"
+  },
+  {
+    "source": "darling",
+    "target": "cobalt",
+    "type": "neutral"
+  },
+  {
+    "source": "darling",
+    "target": "coop",
+    "type": "likes"
+  },
+  {
+    "source": "darling",
+    "target": "copyright",
+    "type": "neutral"
+  },
+  {
+    "source": "darling",
+    "target": "darvik",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "darling",
+    "target": "fragment",
+    "type": "dislikes"
+  },
+  {
+    "source": "darling",
+    "target": "gruyere",
+    "type": "likes"
+  },
+  {
+    "source": "darling",
+    "target": "ice",
+    "type": "despises"
+  },
+  {
+    "source": "darling",
+    "target": "ichor",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "darling",
+    "target": "lumi",
+    "type": "despises"
+  },
+  {
+    "source": "darling",
+    "target": "mars",
+    "type": "likes"
+  },
+  {
+    "source": "darling",
+    "target": "millie",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "darling",
+    "target": "neil_spork",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "darling",
+    "target": "oatmeal",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "darling",
+    "target": "polarity",
+    "type": "in_love_with"
+  },
+  {
+    "source": "darling",
+    "target": "richter",
+    "type": "dislikes"
+  },
+  {
+    "source": "darling",
+    "target": "rick",
+    "type": "likes"
+  },
+  {
+    "source": "darling",
+    "target": "ryvets",
+    "type": "in_love_with"
+  },
+  {
+    "source": "darling",
+    "target": "starlight",
+    "type": "hates"
+  },
+  {
+    "source": "darling",
+    "target": "torque",
+    "type": "neutral"
+  },
+  {
+    "source": "darling",
+    "target": "volt",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "darvik",
+    "target": "alan_spork",
+    "type": "despises"
   },
   {
     "source": "darvik",
@@ -16,17 +676,972 @@
   },
   {
     "source": "darvik",
+    "target": "angelique",
+    "type": "neutral"
+  },
+  {
+    "source": "darvik",
+    "target": "axel",
+    "type": "likes"
+  },
+  {
+    "source": "darvik",
+    "target": "caleir",
+    "type": "hates"
+  },
+  {
+    "source": "darvik",
+    "target": "captain",
+    "type": "neutral"
+  },
+  {
+    "source": "darvik",
+    "target": "cobalt",
+    "type": "likes"
+  },
+  {
+    "source": "darvik",
+    "target": "coop",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "darvik",
+    "target": "copyright",
+    "type": "neutral"
+  },
+  {
+    "source": "darvik",
+    "target": "darling",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "darvik",
+    "target": "fragment",
+    "type": "neutral"
+  },
+  {
+    "source": "darvik",
+    "target": "gruyere",
+    "type": "dislikes"
+  },
+  {
+    "source": "darvik",
+    "target": "hex",
+    "type": "neutral"
+  },
+  {
+    "source": "darvik",
+    "target": "ice",
+    "type": "despises"
+  },
+  {
+    "source": "darvik",
     "target": "ichor",
     "type": "likes_a_lot"
   },
   {
+    "source": "darvik",
+    "target": "lumi",
+    "type": "despises"
+  },
+  {
+    "source": "darvik",
+    "target": "mars",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "darvik",
+    "target": "neil_spork",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "darvik",
+    "target": "oatmeal",
+    "type": "neutral"
+  },
+  {
+    "source": "darvik",
+    "target": "polarity",
+    "type": "dislikes"
+  },
+  {
+    "source": "darvik",
+    "target": "prion",
+    "type": "dislikes"
+  },
+  {
+    "source": "darvik",
+    "target": "richter",
+    "type": "neutral"
+  },
+  {
+    "source": "darvik",
+    "target": "rick",
+    "type": "likes"
+  },
+  {
+    "source": "darvik",
+    "target": "ryvets",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "darvik",
+    "target": "stacy",
+    "type": "neutral"
+  },
+  {
+    "source": "darvik",
+    "target": "starlight",
+    "type": "dislikes"
+  },
+  {
+    "source": "darvik",
+    "target": "torque",
+    "type": "neutral"
+  },
+  {
+    "source": "darvik",
+    "target": "volt",
+    "type": "likes"
+  },
+  {
+    "source": "oatmeal",
+    "target": "alloy",
+    "type": "despises"
+  },
+  {
+    "source": "oatmeal",
+    "target": "captain",
+    "type": "dislikes"
+  },
+  {
+    "source": "oatmeal",
+    "target": "cobalt",
+    "type": "likes"
+  },
+  {
+    "source": "oatmeal",
+    "target": "coop",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "oatmeal",
+    "target": "copyright",
+    "type": "neutral"
+  },
+  {
+    "source": "oatmeal",
+    "target": "darling",
+    "type": "likes"
+  },
+  {
+    "source": "oatmeal",
+    "target": "darvik",
+    "type": "likes"
+  },
+  {
+    "source": "oatmeal",
+    "target": "fragment",
+    "type": "hates"
+  },
+  {
+    "source": "oatmeal",
+    "target": "gruyere",
+    "type": "neutral"
+  },
+  {
+    "source": "oatmeal",
+    "target": "ice",
+    "type": "neutral"
+  },
+  {
+    "source": "oatmeal",
+    "target": "ichor",
+    "type": "dislikes"
+  },
+  {
+    "source": "oatmeal",
+    "target": "lumi",
+    "type": "dislikes"
+  },
+  {
+    "source": "oatmeal",
+    "target": "mars",
+    "type": "likes"
+  },
+  {
+    "source": "oatmeal",
+    "target": "polarity",
+    "type": "dislikes"
+  },
+  {
+    "source": "oatmeal",
+    "target": "richter",
+    "type": "neutral"
+  },
+  {
+    "source": "oatmeal",
+    "target": "rick",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "oatmeal",
+    "target": "ryvets",
+    "type": "likes"
+  },
+  {
+    "source": "oatmeal",
+    "target": "starlight",
+    "type": "hates"
+  },
+  {
+    "source": "oatmeal",
+    "target": "torque",
+    "type": "neutral"
+  },
+  {
+    "source": "oatmeal",
+    "target": "volt",
+    "type": "likes"
+  },
+  {
+    "source": "gruyere",
+    "target": "alan_spork",
+    "type": "despises"
+  },
+  {
+    "source": "gruyere",
+    "target": "alloy",
+    "type": "neutral"
+  },
+  {
+    "source": "gruyere",
+    "target": "captain",
+    "type": "neutral"
+  },
+  {
+    "source": "gruyere",
+    "target": "cobalt",
+    "type": "likes"
+  },
+  {
+    "source": "gruyere",
+    "target": "coop",
+    "type": "likes"
+  },
+  {
+    "source": "gruyere",
+    "target": "copyright",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "gruyere",
+    "target": "darling",
+    "type": "neutral"
+  },
+  {
+    "source": "gruyere",
+    "target": "darvik",
+    "type": "neutral"
+  },
+  {
+    "source": "gruyere",
+    "target": "fragment",
+    "type": "neutral"
+  },
+  {
+    "source": "gruyere",
+    "target": "ice",
+    "type": "despises"
+  },
+  {
+    "source": "gruyere",
+    "target": "lumi",
+    "type": "likes"
+  },
+  {
+    "source": "gruyere",
+    "target": "ichor",
+    "type": "likes"
+  },
+  {
+    "source": "gruyere",
+    "target": "mars",
+    "type": "likes"
+  },
+  {
+    "source": "gruyere",
+    "target": "neil_spork",
+    "type": "dislikes"
+  },
+  {
+    "source": "gruyere",
+    "target": "oatmeal",
+    "type": "likes"
+  },
+  {
+    "source": "gruyere",
+    "target": "polarity",
+    "type": "neutral"
+  },
+  {
+    "source": "gruyere",
+    "target": "richter",
+    "type": "neutral"
+  },
+  {
+    "source": "gruyere",
+    "target": "rick",
+    "type": "likes"
+  },
+  {
+    "source": "gruyere",
+    "target": "ryvets",
+    "type": "likes"
+  },
+  {
+    "source": "gruyere",
+    "target": "starlight",
+    "type": "dislikes"
+  },
+  {
+    "source": "gruyere",
+    "target": "torque",
+    "type": "neutral"
+  },
+  {
+    "source": "gruyere",
+    "target": "volt",
+    "type": "neutral"
+  },
+  {
+    "source": "polarity",
+    "target": "alan_spork",
+    "type": "dislikes"
+  },
+  {
+    "source": "polarity",
+    "target": "alloy",
+    "type": "likes"
+  },
+  {
+    "source": "polarity",
+    "target": "captain",
+    "type": "dislikes"
+  },
+  {
+    "source": "polarity",
+    "target": "cobalt",
+    "type": "neutral"
+  },
+  {
+    "source": "polarity",
+    "target": "coop",
+    "type": "likes"
+  },
+  {
+    "source": "polarity",
+    "target": "copyright",
+    "type": "dislikes"
+  },
+  {
+    "source": "polarity",
+    "target": "darling",
+    "type": "in_love_with"
+  },
+  {
+    "source": "polarity",
+    "target": "darvik",
+    "type": "likes"
+  },
+  {
+    "source": "polarity",
+    "target": "fragment",
+    "type": "likes"
+  },
+  {
+    "source": "polarity",
+    "target": "gruyere",
+    "type": "neutral"
+  },
+  {
+    "source": "polarity",
+    "target": "ice",
+    "type": "dislikes"
+  },
+  {
+    "source": "polarity",
+    "target": "ichor",
+    "type": "dislikes"
+  },
+  {
+    "source": "polarity",
+    "target": "lumi",
+    "type": "dislikes"
+  },
+  {
+    "source": "polarity",
+    "target": "mars",
+    "type": "dislikes"
+  },
+  {
+    "source": "polarity",
+    "target": "millie",
+    "type": "hates"
+  },
+  {
+    "source": "polarity",
+    "target": "neil_spork",
+    "type": "dislikes"
+  },
+  {
+    "source": "polarity",
+    "target": "oatmeal",
+    "type": "dislikes"
+  },
+  {
+    "source": "polarity",
+    "target": "richter",
+    "type": "hates"
+  },
+  {
+    "source": "polarity",
+    "target": "rick",
+    "type": "likes"
+  },
+  {
+    "source": "polarity",
+    "target": "ryvets",
+    "type": "in_love_with"
+  },
+  {
+    "source": "polarity",
+    "target": "starlight",
+    "type": "dislikes"
+  },
+  {
+    "source": "polarity",
+    "target": "torque",
+    "type": "dislikes"
+  },
+  {
+    "source": "polarity",
+    "target": "volt",
+    "type": "dislikes"
+  },
+  {
+    "source": "ichor",
+    "target": "alan_spork",
+    "type": "hates"
+  },
+  {
     "source": "ichor",
     "target": "alloy",
+    "type": "hates"
+  },
+  {
+    "source": "ichor",
+    "target": "captain",
+    "type": "likes"
+  },
+  {
+    "source": "ichor",
+    "target": "cobalt",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "ichor",
+    "target": "coop",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "ichor",
+    "target": "copyright",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "ichor",
+    "target": "darling",
     "type": "likes_a_lot"
   },
   {
     "source": "ichor",
     "target": "darvik",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "ichor",
+    "target": "fragment",
+    "type": "likes"
+  },
+  {
+    "source": "ichor",
+    "target": "gruyere",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "ichor",
+    "target": "ice",
+    "type": "dislikes"
+  },
+  {
+    "source": "ichor",
+    "target": "lumi",
+    "type": "dislikes"
+  },
+  {
+    "source": "ichor",
+    "target": "mars",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "ichor",
+    "target": "neil_spork",
+    "type": "likes"
+  },
+  {
+    "source": "ichor",
+    "target": "oatmeal",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "ichor",
+    "target": "polarity",
+    "type": "likes"
+  },
+  {
+    "source": "ichor",
+    "target": "richter",
+    "type": "likes"
+  },
+  {
+    "source": "ichor",
+    "target": "rick",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "ichor",
+    "target": "ryvets",
+    "type": "likes"
+  },
+  {
+    "source": "ichor",
+    "target": "starlight",
+    "type": "dislikes"
+  },
+  {
+    "source": "ichor",
+    "target": "torque",
+    "type": "likes"
+  },
+  {
+    "source": "ichor",
+    "target": "volt",
+    "type": "likes"
+  },
+  {
+    "source": "mars",
+    "target": "alan_spork",
     "type": "hates"
+  },
+  {
+    "source": "mars",
+    "target": "alloy",
+    "type": "hates"
+  },
+  {
+    "source": "mars",
+    "target": "captain",
+    "type": "likes"
+  },
+  {
+    "source": "mars",
+    "target": "cobalt",
+    "type": "likes"
+  },
+  {
+    "source": "mars",
+    "target": "coop",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "mars",
+    "target": "copyright",
+    "type": "neutral"
+  },
+  {
+    "source": "mars",
+    "target": "darling",
+    "type": "neutral"
+  },
+  {
+    "source": "mars",
+    "target": "darvik",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "mars",
+    "target": "fragment",
+    "type": "dislikes"
+  },
+  {
+    "source": "mars",
+    "target": "gruyere",
+    "type": "neutral"
+  },
+  {
+    "source": "mars",
+    "target": "ice",
+    "type": "dislikes"
+  },
+  {
+    "source": "mars",
+    "target": "ichor",
+    "type": "likes"
+  },
+  {
+    "source": "mars",
+    "target": "lumi",
+    "type": "hates"
+  },
+  {
+    "source": "mars",
+    "target": "neil_spork",
+    "type": "neutral"
+  },
+  {
+    "source": "mars",
+    "target": "oatmeal",
+    "type": "neutral"
+  },
+  {
+    "source": "mars",
+    "target": "polarity",
+    "type": "dislikes"
+  },
+  {
+    "source": "mars",
+    "target": "richter",
+    "type": "hates"
+  },
+  {
+    "source": "mars",
+    "target": "rick",
+    "type": "neutral"
+  },
+  {
+    "source": "mars",
+    "target": "ryvets",
+    "type": "neutral"
+  },
+  {
+    "source": "mars",
+    "target": "starlight",
+    "type": "dislikes"
+  },
+  {
+    "source": "mars",
+    "target": "torque",
+    "type": "likes"
+  },
+  {
+    "source": "mars",
+    "target": "volt",
+    "type": "neutral"
+  },
+  {
+    "source": "volt",
+    "target": "alan_spork",
+    "type": "despises"
+  },
+  {
+    "source": "volt",
+    "target": "alloy",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "volt",
+    "target": "captain",
+    "type": "in_love_with"
+  },
+  {
+    "source": "volt",
+    "target": "cobalt",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "volt",
+    "target": "coop",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "volt",
+    "target": "copyright",
+    "type": "neutral"
+  },
+  {
+    "source": "volt",
+    "target": "darling",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "volt",
+    "target": "darvik",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "volt",
+    "target": "fragment",
+    "type": "neutral"
+  },
+  {
+    "source": "volt",
+    "target": "gruyere",
+    "type": "neutral"
+  },
+  {
+    "source": "volt",
+    "target": "ice",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "volt",
+    "target": "ichor",
+    "type": "neutral"
+  },
+  {
+    "source": "volt",
+    "target": "mars",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "volt",
+    "target": "neil_spork",
+    "type": "despises"
+  },
+  {
+    "source": "volt",
+    "target": "oatmeal",
+    "type": "neutral"
+  },
+  {
+    "source": "volt",
+    "target": "polarity",
+    "type": "neutral"
+  },
+  {
+    "source": "volt",
+    "target": "richter",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "volt",
+    "target": "rick",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "volt",
+    "target": "ryvets",
+    "type": "neutral"
+  },
+  {
+    "source": "volt",
+    "target": "starlight",
+    "type": "neutral"
+  },
+  {
+    "source": "volt",
+    "target": "torque",
+    "type": "neutral"
+  },
+  {
+    "source": "starlight",
+    "target": "alan_spork",
+    "type": "hates"
+  },
+  {
+    "source": "starlight",
+    "target": "alloy",
+    "type": "despises"
+  },
+  {
+    "source": "starlight",
+    "target": "captain",
+    "type": "hates"
+  },
+  {
+    "source": "starlight",
+    "target": "cobalt",
+    "type": "in_love_with"
+  },
+  {
+    "source": "starlight",
+    "target": "coop",
+    "type": "hates"
+  },
+  {
+    "source": "starlight",
+    "target": "copyright",
+    "type": "hates"
+  },
+  {
+    "source": "starlight",
+    "target": "darling",
+    "type": "hates"
+  },
+  {
+    "source": "starlight",
+    "target": "darvik",
+    "type": "hates"
+  },
+  {
+    "source": "starlight",
+    "target": "fragment",
+    "type": "hates"
+  },
+  {
+    "source": "starlight",
+    "target": "gruyere",
+    "type": "hates"
+  },
+  {
+    "source": "starlight",
+    "target": "ice",
+    "type": "neutral"
+  },
+  {
+    "source": "starlight",
+    "target": "ichor",
+    "type": "in_love_with"
+  },
+  {
+    "source": "starlight",
+    "target": "lumi",
+    "type": "neutral"
+  },
+  {
+    "source": "starlight",
+    "target": "mars",
+    "type": "dislikes"
+  },
+  {
+    "source": "starlight",
+    "target": "neil_spork",
+    "type": "dislikes"
+  },
+  {
+    "source": "starlight",
+    "target": "oatmeal",
+    "type": "likes"
+  },
+  {
+    "source": "starlight",
+    "target": "polarity",
+    "type": "hates"
+  },
+  {
+    "source": "starlight",
+    "target": "richter",
+    "type": "hates"
+  },
+  {
+    "source": "starlight",
+    "target": "rick",
+    "type": "hates"
+  },
+  {
+    "source": "starlight",
+    "target": "ryvets",
+    "type": "dislikes"
+  },
+  {
+    "source": "starlight",
+    "target": "torque",
+    "type": "likes"
+  },
+  {
+    "source": "starlight",
+    "target": "volt",
+    "type": "dislikes"
+  },
+  {
+    "source": "ryvets",
+    "target": "alan_spork",
+    "type": "despises"
+  },
+  {
+    "source": "ryvets",
+    "target": "alloy",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "ryvets",
+    "target": "coop",
+    "type": "neutral"
+  },
+  {
+    "source": "ryvets",
+    "target": "copyright",
+    "type": "neutral"
+  },
+  {
+    "source": "ryvets",
+    "target": "darling",
+    "type": "in_love_with"
+  },
+  {
+    "source": "ryvets",
+    "target": "darvik",
+    "type": "likes_a_lot"
+  },
+  {
+    "source": "ryvets",
+    "target": "emery",
+    "type": "hates"
+  },
+  {
+    "source": "lumi",
+    "target": "emery",
+    "type": "likes"
+  },
+  {
+    "source": "ryvets",
+    "target": "gruyere",
+    "type": "likes"
+  },
+  {
+    "source": "ryvets",
+    "target": "ice",
+    "type": "neutral"
+  },
+  {
+    "source": "ryvets",
+    "target": "ichor",
+    "type": "neutral"
+  },
+  {
+    "source": "ryvets",
+    "target": "lumi",
+    "type": "dislikes"
+  },
+  {
+    "source": "ryvets",
+    "target": "neil_spork",
+    "type": "dislikes"
+  },
+  {
+    "source": "ryvets",
+    "target": "oatmeal",
+    "type": "dislikes"
+  },
+  {
+    "source": "ryvets",
+    "target": "polarity",
+    "type": "in_love_with"
+  },
+  {
+    "source": "ryvets",
+    "target": "rick",
+    "type": "likes"
   }
 ]

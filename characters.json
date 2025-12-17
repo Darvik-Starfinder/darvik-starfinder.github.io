@@ -13,5 +13,150 @@
     "id": "ichor",
     "name": "Ichor",
     "image_filename": "ichor.jpg"
+  },
+  {
+    "name": "Darling",
+    "id": "darling",
+    "image_filename": "darling.jpg"
+  },
+  {
+    "name": "Rick O'Shae",
+    "id": "rick",
+    "image_filename": "rick.jpg"
+  },
+  {
+    "name": "Gruyère",
+    "id": "gruyere",
+    "image_filename": "gruyere.jpg"
+  },
+  {
+    "name": "Coop",
+    "id": "coop",
+    "image_filename": "coop.jpg"
+  },
+  {
+    "name": "Cobalt",
+    "id": "cobalt",
+    "image_filename": "cobalt.jpg"
+  },
+  {
+    "name": "Starlight",
+    "id": "starlight",
+    "image_filename": "starlight.jpg"
+  },
+  {
+    "name": "Mars",
+    "id": "mars",
+    "image_filename": "mars.jpg"
+  },
+  {
+    "name": "Hex",
+    "id": "hex",
+    "image_filename": "hex.jpg"
+  },
+  {
+    "name": "Ice",
+    "id": "ice",
+    "image_filename": "ice.jpg"
+  },
+  {
+    "name": "Lumi",
+    "id": "lumi",
+    "image_filename": "lumi.jpg"
+  },
+  {
+    "name": "Ryvets",
+    "id": "ryvets",
+    "image_filename": "ryvets.jpg"
+  },
+  {
+    "name": "Polarity",
+    "id": "polarity",
+    "image_filename": "polarity.jpg"
+  },
+  {
+    "name": "Fragment",
+    "id": "fragment",
+    "image_filename": "fragment.jpg"
+  },
+  {
+    "name": "Torque",
+    "id": "torque",
+    "image_filename": "torque.jpg"
+  },
+  {
+    "name": "Captain",
+    "id": "captain",
+    "image_filename": "captain.jpg"
+  },
+  {
+    "name": "Oatmeal",
+    "id": "oatmeal",
+    "image_filename": "oatmeal.jpg"
+  },
+  {
+    "name": "Alan Spork",
+    "id": "alan_spork",
+    "image_filename": "alan_spork.jpg"
+  },
+  {
+    "name": "Neil Spork",
+    "id": "neil_spork",
+    "image_filename": "neil_spork.jpg"
+  },
+  {
+    "name": "Copyright",
+    "id": "copyright",
+    "image_filename": "copyright.jpg"
+  },
+  {
+    "name": "Volt",
+    "id": "volt",
+    "image_filename": "volt.jpg"
+  },
+  {
+    "name": "Richter",
+    "id": "richter",
+    "image_filename": "richter.jpg"
+  },
+  {
+    "name": "One (Avery)",
+    "id": "one",
+    "image_filename": "one.jpg"
+  },
+  {
+    "name": "Emery",
+    "id": "emery",
+    "image_filename": "emery.jpg"
+  },
+  {
+    "name": "Millie",
+    "id": "millie",
+    "image_filename": "millie.jpg"
+  },
+  {
+    "name": "Axel",
+    "id": "axel",
+    "image_filename": "axel.jpg"
+  },
+  {
+    "name": "Prion",
+    "id": "prion",
+    "image_filename": "prion.jpg"
+  },
+  {
+    "name": "Angelique",
+    "id": "angelique",
+    "image_filename": "angelique.jpg"
+  },
+  {
+    "name": "Stacy",
+    "id": "stacy",
+    "image_filename": "stacy.jpg"
+  },
+  {
+    "name": "Caleir",
+    "id": "caleir",
+    "image_filename": "caleir.jpg"
   }
 ]
